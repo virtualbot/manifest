@@ -5,9 +5,13 @@
            fetch="git://android-x86.git.sf.net/gitroot/android-x86/korg/" />
   <remote  name="x86"
            fetch=".." />
+  <remote name="virtualbot" fetch="https://github.com/virtualbot/" />
   <default revision="refs/tags/android-4.0.3_r1"
            remote="aosp"
            sync-j="1" />
+
+  <!-- from virtualbot repositories --> 
+  <project path="device/virtualbot" name="device_virtualbot.git" remote="virtualbot" revision="ics-x86" />
 
   <!-- from x86 port repositories -->
   <project path="build" name="platform/build" remote="x86" revision="ics-x86">
@@ -16,11 +20,7 @@
   <project path="kernel" name="kernel/common" remote="x86" revision="android-3.0.x" />
   <project path="bionic" name="platform/bionic" remote="x86" revision="ics-x86" />
   <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="ics-x86" />
-  <project path="device/amd" name="device/amd" remote="x86" revision="ics-x86" />
-  <project path="device/asus" name="device/asus" remote="x86" revision="ics-x86" />
   <project path="device/common" name="device/common" remote="x86" revision="ics-x86" />
-  <project path="device/tegatech/tegav2" name="device/tegatech/tegav2" remote="x86" revision="ics-x86" />
-  <project path="device/lenovo/s103t" name="device/lenovo/s103t" remote="x86" revision="ics-x86" />
   <project path="external/alsa-lib" name="platform/external/alsa-lib" remote="x86" revision="ics-x86" />
   <project path="external/alsa-utils" name="platform/external/alsa-utils" remote="x86" revision="ics-x86" />
   <project path="external/busybox" name="platform/external/busybox" remote="x86" revision="ics-x86" />
